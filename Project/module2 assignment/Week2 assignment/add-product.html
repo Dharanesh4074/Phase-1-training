@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">Swiggy</a>
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item ">
+                        <a href="admin-edit-product.html" class="nav-link text-white">All Products</a>
+                    </li>
+                    <li class="nav-item active border-bottom border-white border-2">
+                        <a href="#" class="nav-link text-white">Add Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link text-white">Logout </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container bg-primary bg-opacity-25 m-4 p-4" id="form">
+            Food Image: <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png"><br><br>
+
+            Name: <input type="text" name="name" id="name" placeholder="Enter food name"><br><br>
+
+            Category:
+            <select name="category" id="category">
+                <option value="" disabled selected>Select Category</option>
+                <option value="Tandoori">Tandoori</option>
+                <option value="Starter">Starter</option>
+                <option value="MainCourse">Main Course</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="VegCurry">Veg Curry</option>
+            </select><br><br>
+
+            Price: <input type="number" name="price" id="price" placeholder="Enter price"><br><br>
+
+            Launched On: <input type="date" name="launchedOn" id="launchedOn"><br><br>
+
+            Delivery Type:
+            <select name="deliveryType" id="deliveryType">
+                <option value="" disabled selected>Select delivery type</option>
+                <option value="Free Delivery">Free Delivery</option>
+                <option value="No Free Delivery">No Free Delivery</option>
+            </select><br><br>
+            <center>
+                <button class="btn-primary border-0 bg-primary text-white rounded al" onclick="addProduct()">Add
+                    Product</button>
+            </center>
+        </div>
+    </main>
+
+
+    <footer class="bg-primary text-white p-2">
+        <div class="text-center">@copywirght 2025</div>
+    </footer>
+
+    <script>
+        function addProduct(product) {
+            var flag = false;
+            const img = document.getElementById("image").value;
+            const name = document.getElementById("name").value;
+            const category = document.getElementById("category").value;
+            const price = document.getElementById("price").value;
+            const launched = document.getElementById("launchedOn").value;
+            const deliverytype = document.getElementById("deliveryType").value;
+
+            if (!img || !name || !category || !price || !launched || !deliverytype) {
+                alert("Please fill all the fields");
+            } else {
+                alert("Added Successfully");
+                img.value = "";
+                name.value = "";
+                category.value = "";
+                price.value = "";
+                launched.value = "";
+                deliverytype.value = "";
+            };
+        };
+    </script>
+
+</body>
+
+</html>

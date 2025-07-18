@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <h6 From Cart id="nameDiv" class="text-white"></h6>
+                <a class="navbar-brand" href="#">Swiggy</a>
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item active ">
+                        <a href="user-view-product.html" target="_self" class="nav-link text-white">All category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="user-home.html" class="nav-link text-white">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="offers.html" class="nav-link text-white">Offers</a>
+                    </li>
+                    <li class="nav-item border-bottom border-white border-2">
+                        <a href="#" class="nav-link text-white" target="_self">Cart
+                            <span class="badge badge-light bg-white ms-2 text-primary">4</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link text-white">Logout </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 p-3">
+                    <div class="card shadow-lg">
+                        <img src="./images/chapati.jfif" alt="chapati"
+                            class="card-img-top border-bottom border-primary p-1" height="150">
+
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Chapati(2)</h5>
+                            <p class="card-text mb-1">₹ 40 </p>
+                            <p class="card-text mb-1">Launched on 22/3/25</p>
+                            <p class="text-success">Free Delivery</p>
+                            <center>
+                                <button class="btn-primary border-0 bg-primary text-white rounded al"
+                                    onclick="removeFromCart()">Remove From Cart</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 p-3">
+                    <div class="card shadow-lg">
+                        <img src="./images/chilly.jfif" alt="Chilly"
+                            class="card-img-top border-bottom border-primary p-1" height="150">
+
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Chilly 200g</h5>
+                            <p class="card-text mb-1">2 x ₹ 60 = ₹120</p>
+                            <p class="card-text mb-1">Launched on 21/10/24</p>
+                            <p class="text-danger">No Free Delivery</p>
+                            <center>
+                                <button class="btn-primary border-0 bg-primary text-white rounded al"
+                                    onclick="removeFromCart()">Remove From Cart</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 p-3">
+                    <div class="card shadow-lg">
+                        <img src="./images/chnoodles.jfif" alt="Noodles"
+                            class="card-img-top border-bottom border-primary p-1" height="150">
+
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Chicken Noodles</h5>
+                            <p class="card-text mb-1">1 x ₹ 160 = ₹ 160</p>
+                            <p class="card-text mb-1">Launched on 21/10/25</p>
+                            <p class="text-success">Free Delivery</p>
+                            <center>
+                                <button class="btn-primary border-0 bg-primary text-white rounded al"
+                                    onclick="removeFromCart()">Remove From Cart</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 p-3">
+                    <div class="card shadow-lg">
+                        <img src="./images/chrice.jfif" alt="Chicken Rice"
+                            class="card-img-top border-bottom border-primary p-1" height="150">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Chicken Rice</h5>
+                            <p class="card-text mb-1">3 x ₹ 120 = ₹ 360</p>
+                            <p class="card-text mb-1">Launched on 10/7/25</p>
+                            <p class="text-danger">No Free Delivery</p>
+                            <center>
+                                <button class="btn-primary border-0 bg-primary text-white rounded al"
+                                    onclick="removeFromCart()">Remove From Cart</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer class="bg-primary text-white p-2">
+        <div class="text-center">&copy; 2025 Swiggy. All rights reserved.</div>
+    </footer>
+
+    <script>
+        function removeFromCart() {
+            alert("Removed to the cart Successfully");
+        };
+        const name = localStorage.getItem("name"); 
+        document.getElementById("nameDiv").textContent = `Hi, ${name}`;
+    </script>
+</body>
+
+</html>
